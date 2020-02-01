@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>登録フォーム</title>
+</head>
+<h3> <font color="red">※{{error}}</font></h3>
+<h3> <font color="blue">※{{errorEmail}}</font></h3>
+{{!-- <h3> <font color="blue">※{{user.name}}</font></h3>
+<h3> <font color="blue">※{{user.email}}</font></h3> --}}
+<body>
+<h1>登録フォーム</h1>
+<form action="/insert" method="POST">
+    名前　： <input type="text" name="name" value="{{use.name}}"><br>
+    メール： <input type="text" name="email" value="{{use.email}}"><br>
+    <button type="submit">送信</button>
+</form>
+<form action="/" method="GET">
+    <button type="submit">戻る</button>
+</form> 
+</body>
+</html>

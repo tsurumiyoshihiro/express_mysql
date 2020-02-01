@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>User list</title>
+</head>
+<body>
+{{> useradd}}
+
+    <table border="1" style="border-collapse: collapse" >
+        <tr bgcolor="#ccffcc">
+            <th>名前</th>
+            <th>email</th>
+            <th>更新</th>
+            <th>削除</th>
+        </tr>
+        {{#each users}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.email}}</td>
+            <td><a href="/edit/{{this.id}}">更新</a></td>
+            <td><a href="/delete/{{this.id}}">削除</a></td>
+        </tr>
+        {{/each}}
+    </table>
+</body>
+</html>

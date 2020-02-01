@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>User Edit</title>
+</head>
+<body>
+    <h1>削除フォーム</h1>
+    <p>削除してもいいですか？</p>
+    <form action="/delete/{{user.0.id}}?_method=DELETE" method="POST">
+        name: <input type="text" disabled="disabled" name="name" value="{{user.0.name}}"><br>
+        email: <input type="text" disabled="disabled" name="email" value="{{user.0.email}}"><br>
+        <button type="submit">削除</button>
+    </form>    
+     <form action="/" method="GET">
+        <button type="submit">戻る</button>
+    </form>    
+</body>
+</html>
